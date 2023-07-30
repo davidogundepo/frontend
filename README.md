@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# JWT-based Authentication System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This frontend project is part of the JWT-based Authentication System, which provides a secure user authentication and authorization mechanism. The frontend is built using React and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To start the development server, run the following command in the project directory:
 
 ### `npm start`
 
