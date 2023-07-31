@@ -3,7 +3,7 @@ This is a JWT-based Authentication System developed using React and Symfony with
 
 ### `N.B. This is for the Frontend Repository`
 
-[Please check Frontend here](https://github.com/davidogundepo/backend)
+[Please check Backend here](https://github.com/davidogundepo/backend)
 
 
 ## Getting Started
