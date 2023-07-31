@@ -1,70 +1,99 @@
-# JWT-based Authentication System - Frontend
+#  JWT-based Authentication System - Frontend
+This is a JWT-based Authentication System developed using React and Symfony with LexikJWTAuthenticationBundle. The system allows users to register, login, and retrieve user information. Users can also update their name and address. The code prioritizes security and maintains high code quality for production readiness and post-launch support.
 
-This frontend project is part of the JWT-based Authentication System, which provides a secure user authentication and authorization mechanism. The frontend is built using React and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `N.B. This is for the Frontend Repository`
+
+[Please check Frontend here](https://github.com/davidogundepo/backend)
+
 
 ## Getting Started
 
-To start the development server, run the following command in the project directory:
+These instructions will help you set up and run the project locally on your machine.
 
-### `npm start`
+### Prerequisites
+Before running the project, you need to have the following software installed:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Docker: [Download Docker](https://www.docker.com/get-started)
+- Node.js: [Download Node.js](https://nodejs.org/en/download/)
+- Composer: [Download Composer](https://getcomposer.org/download/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Instaliing
+Follow these steps to get the project up and running:
 
-### `npm test`
+Clone this repository to your local machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone <repository_url>
+cd JWT-based-Authentication-System
+```
 
-### `npm run build`
+### Frontend Setup
+1. Open a new terminal window and navigate to the `frontend` folder:
+   ```
+   cd ../frontend
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install the  required Node.js packages:
+   ```
+   npm install
+   ```
+   
+3. In the same `frontend` folder, create a `.env` file with the following content:
+   ```
+   REACT_APP_BACKEND_API=http://localhost:8000/api
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Running the Application
+1. Go back to the root folder of the project:
+   ```
+   cd ..
+   ```
+2. Use `docker-compose` to start both the backend and frontend:
+   ```
+   docker-compose up -d
+   ```
+   This command will build and start the containers. The -d flag runs the containers in detached mode.
 
-### `npm run eject`
+3. Access the frontend in your browser:
+   Open **`http://localhost:8000/api`**  in your web browser to access the React frontend.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
+Here are the main functionalities of the JWT-based Authentication System:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **User Registration**: Visit the registration page on the frontend and provide your name, email address, and password to create an account. The system will validate the input and securely store user data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **User Login**: Visit the login page on the frontend and enter your registered email and password to log in. The system will authenticate you and generate a JWT token using LexikJWTAuthenticationBundle, providing it to the client for subsequent authenticated requests.
 
-## Learn More
+- **User Information Retrieval**: After successful login, you can retrieve your user information, including name, email, and address, by visiting the corresponding page on the frontend.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **User Update**: Logged-in users can update their name and address securely by visiting the update page on the frontend and making the necessary changes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Testing
+The project includes comprehensive unit tests for critical functionality. To run the tests, follow these steps:
 
-### Analyzing the Bundle Size
+For Frontend Tests:
+```
+cd frontend
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Built With
+- **[React](https://reactjs.org/)** -  A JavaScript library for building user interfaces.
+- **[Symfony](https://symfony.com)** - A PHP web application framework.
+- **[LexikJWTAuthenticationBundle](https://github.com/lexik/LexikJWTAuthenticationBundle)** - A JWT authentication bundle for Symfony.
+- **[Docker](https://www.docker.com)** - A platform for developing, shipping, and running applications in containers.
 
-### Making a Progressive Web App
+## Authors
+- **[David Ogundepo](https://github.com/davidogundepo)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Licence
+This project is licensed under the **[MIT License](https://opensource.org/license/mit/)**
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgements
+- **[John Mahood](https://www.linkedin.com/in/johnmahood2018/)** - For the job description and company overview.
+- **[Pascal Marechal](https://github.com/PascalMarechal)** - For providing the job interview test and guidance.
+- **[The Coaches' Voice Company](https://github.com/Jay-CoachesVoice)** - For reviewing and evaluating the project.
